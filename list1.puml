@@ -1,0 +1,13 @@
+@startuml
+start
+:subjects = ['วิชาA', 'วิชาB', 'วิชาC', 'วิชาD'];
+:print("เทอมนี้เรียนวิชาต่อไปนี้ "+subjects[0]+" "+subjects[1]+" "+subjects[2]+" และ "+subjects[3]);
+:print("เทอมนี้ชอบวิชาต่อไปนี้เรียงตามลำดับ "+subjects[2]+" "+subjects[3]+" "+subjects[0]+" และ "+subjects[1]);
+:IdontLikeThisSubject = subjects.pop(1);
+:print("ไม่ชอบวิชา "+IdontLikeThisSubject+" เพราะอาจารย์ไม่หล่อ");
+:subjects.append("วิชาx");
+:subjects.insert(0,"วิชาy");
+:print(sorted(subjects));
+:print(sorted(subjects, reverse=True));
+stop
+@enduml
